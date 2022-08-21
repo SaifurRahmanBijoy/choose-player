@@ -1,8 +1,6 @@
-const playerListToCompare=document.getElementsByTagName('ul');
+
 function playerNameInclude(playerId) {
-    if(playerListToCompare.length>5){
-        alert("'You can't choose more than 5 players")
-    }
+    
   const playerNameText = document.getElementById(playerId);
   const playerName = playerNameText.innerText;
   const nameList = document.getElementById("name-list");
