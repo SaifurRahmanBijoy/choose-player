@@ -37,55 +37,101 @@
           <div
             class="text-center bg-gray-700 round border-2 border-slate-700 shadow-md shadow-slate-600"
           >
-            <img class="mb-2" src="images/20220821_203026.png" alt="" />
-            <h1 class="text-lg font-semibold mb-2">Lionel Messi</h1>
-            <button class="mb-4 round bg-blue-700 py-1 px-8">Select</button>
+            <img class="mb-2 w-full" src="images/20220821_203026.png" alt="" />
+            <h1 id="name-messi" class="text-lg font-semibold mb-2">
+              Lionel Messi
+            </h1>
+            <button id="btn-messi" class="mb-4 round bg-blue-700 py-1 px-8">
+              Select
+            </button>
           </div>
           <!-- 2 -->
           <div
             class="text-center bg-gray-700 round border-2 border-slate-700 shadow-md shadow-slate-600"
           >
-            <img class="mb-2" src="images/20220821_203103.png" alt="" />
-            <h1 class="text-lg font-semibold mb-2">Neymar Jr</h1>
-            <button class="mb-4 round bg-blue-700 py-1 px-8">Select</button>
+            <img class="mb-2 w-full" src="images/20220821_203103.png" alt="" />
+            <h1 id="name-neymar" class="text-lg font-semibold mb-2">Neymar Jr</h1>
+            <button id="btn-neymar" class="mb-4 round bg-blue-700 py-1 px-8">Select</button>
           </div>
           <!-- 3 -->
           <div
             class="text-center bg-gray-700 round border-2 border-slate-700 shadow-md shadow-slate-600"
           >
-            <img class="mb-2" src="images/20220821_203141.png" alt="" />
-            <h1 class="text-lg font-semibold mb-2">Cristiano Ronaldo</h1>
-            <button class="mb-4 round bg-blue-700 py-1 px-8">Select</button>
+            <img class="mb-2 w-full" src="images/20220821_203141.png" alt="" />
+            <h1 id="name-ronaldo" class="text-lg font-semibold mb-2">Cristiano Ronaldo</h1>
+            <button id="btn-ronaldo" class="mb-4 round bg-blue-700 py-1 px-8">Select</button>
           </div>
           <!-- 4-->
           <div
             class="text-center bg-gray-700 round border-2 border-slate-700 shadow-md shadow-slate-600"
           >
-            <img class="mb-2" src="images/20220821_203118.png" alt="" />
-            <h1 class="text-lg font-semibold mb-2">Kylian Mbappe</h1>
-            <button class="mb-4 round bg-blue-700 py-1 px-8">Select</button>
+            <img class="mb-2 w-full" src="images/20220821_203118.png" alt="" />
+            <h1 id="name-mbappe" class="text-lg font-semibold mb-2">Kylian Mbappe</h1>
+            <button id="btn-mbappe" class="mb-4 round bg-blue-700 py-1 px-8">Select</button>
           </div>
           <!-- 5 -->
           <div
             class="text-center bg-gray-700 round border-2 border-slate-700 shadow-md shadow-slate-600"
           >
-            <img class="mb-2" src="images/20220821_203158.png" alt="" />
-            <h1 class="text-lg font-semibold mb-2">Sergio Agüero</h1>
-            <button class="mb-4 round bg-blue-700 py-1 px-8">Select</button>
+            <img class="mb-2 w-full" src="images/20220821_203158.png" alt="" />
+            <h1 id="name-aguero" class="text-lg font-semibold mb-2">Sergio Agüero</h1>
+            <button id="btn-aguero" class="mb-4 round bg-blue-700 py-1 px-8">Select</button>
           </div>
           <!-- 6 -->
           <div
             class="text-center bg-gray-700 round border-2 border-slate-700 shadow-md shadow-slate-600"
           >
-            <img class="mb-2" src="images/20220821_203226.png" alt="" />
-            <h1 class="text-lg font-semibold mb-2">Sergio Ramos</h1>
-            <button class="mb-4 round bg-blue-700 py-1 px-8">Select</button>
+            <img class="mb-2 w-full" src="images/20220821_203226.png" alt="" />
+            <h1 id="name-ramos" class="text-lg font-semibold mb-2">Sergio Ramos</h1>
+            <button id="btn-ramos" class="mb-4 round bg-blue-700 py-1 px-8">Select</button>
           </div>
         </div>
-        <!-- list & calculation -->
-        <div>
-          <div>
-            <h1>Player's List</h1>
+        <!-- ===========list & calculation=========== -->
+        <div class="flex-col w-auto">
+          <!-- list  -->
+          <div
+            class="bg-gray-700 mb-5 round border-2 border-slate-700 px-4 py-7 shadow-md shadow-slate-600"
+          >
+            <h1 class="text-2xl font-semibold my-3 text-center">
+              Player's List
+            </h1>
+            <ol id="name-list" class="text-xl"></ol>
+          </div>
+          <div
+            class="bg-gray-700 round border-2 border-slate-700 px-4 py-7 shadow-md shadow-slate-600"
+          >
+            <!-- budget & calculation -->
+            <h1 class="text-2xl font-semibold mb-4 text-center">Budget</h1>
+            <!-- per player -->
+            <p class="mb-3">
+              Per Player<input
+                class="bg-gray-900 h-8 mx-2 w-auto"
+                type="text"
+              />
+            </p>
+            <!-- btn calculate  -->
+            <button class="mb-4 round bg-blue-700 py-1 px-8 block">
+              Calculate
+            </button>
+            <!-- player expenses  -->
+            <h2 class="mb-4">Player Expenses: $<span>5000</span></h2>
+            <!-- manager input  -->
+            <p class="mb-3">
+              Manager<input class="bg-gray-900 h-8 mx-2 w-auto" type="text" />
+            </p>
+            <!-- coach input  -->
+            <p class="mb-3">
+              Coach<input class="bg-gray-900 h-8 mx-2 w-auto" type="text" />
+            </p>
+            <!-- btn calculate total  -->
+            <button class="mb-4 round bg-blue-700 py-1 px-8 block">
+              Calculate Total
+            </button>
+            <!-- total  -->
+            <div class="flex justify-between">
+              <p>Total</p>
+              <p>$<span>11000</span></p>
+            </div>
           </div>
         </div>
       </section>
@@ -93,7 +139,12 @@
     <!-- main ends here  -->
     <!-- footer  -->
     <footer class="bg-gray-800">
-        <p class="text-yellow-50 py-5 px-12 text-center">Copyright By Saifur Rahman</p>
+      <p class="text-yellow-50 py-5 px-12 text-center">
+        Copyright By Saifur Rahman
+      </p>
     </footer>
+    <!-- javascript -->
+    <script src="js/player.js"></script>
+    <script src="js/cost.js"></script>
   </body>
 </html>
