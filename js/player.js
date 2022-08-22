@@ -6,21 +6,26 @@ function playerNameInclude(playerId) {
   if (document.getElementById("name-list").childElementCount >= 5) {
     alert("Wow!You've selected 5 Players!");
     return false;
+  } else {
+    const playerNameText = document.getElementById(playerId);
+    const playerName = playerNameText.innerText;
+    const nameList = document.getElementById("name-list");
+    const li = document.createElement("li");
+    count++;
+    li.innerText = count + ". " + playerName;
+    nameList.appendChild(li);
   }
-  const playerNameText = document.getElementById(playerId);
-  const playerName = playerNameText.innerText;
-  const nameList = document.getElementById("name-list");
-  const li = document.createElement("li");
-  count++;
-  li.innerText = count + ". " + playerName;
-  nameList.appendChild(li);
 }
 
 // function for button disbling
-function btndisable(btnId) { 
-  selectButton = document.getElementById(btnId);
-  selectButton.disabled = true;
-  selectButton.style.backgroundColor = "gray";
+function btndisable(btnId) {
+  if (document.getElementById("name-list").childElementCount > 5) {
+    return false;
+  } else {
+    selectButton = document.getElementById(btnId);
+    selectButton.disabled = true;
+    selectButton.style.backgroundColor = "gray";
+  }
 }
 
 document.getElementById("btn-messi").addEventListener("click", function () {
