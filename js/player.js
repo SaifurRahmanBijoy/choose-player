@@ -1,5 +1,10 @@
 let count = 0;
+
 function playerNameInclude(playerId) {
+    if (document.getElementById("name-list").childElementCount >= 5) {
+      alert("Wow!You've selected 5 Players!");
+      return false;
+    }
   const playerNameText = document.getElementById(playerId);
   const playerName = playerNameText.innerText;
   const nameList = document.getElementById("name-list");
@@ -7,10 +12,6 @@ function playerNameInclude(playerId) {
   count++;
   li.innerText = count + ". " + playerName;
   nameList.appendChild(li);
-  if (document.getElementById("name-list").childElementCount >= 5) {
-    alert("Wow!You've selected 5 Players!");
-    return false;
-  }
 }
 
 document.getElementById("btn-messi").addEventListener("click", function () {
