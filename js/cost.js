@@ -5,13 +5,7 @@ document.getElementById("btn-calculate").addEventListener("click", function () {
   const perPlayerInput = document.getElementById("per-player-input");
   const perPlayerInputvalueString = perPlayerInput.value;
   playerCount = document.getElementById("name-list").childElementCount;
-  if (playerCount != 5) {
-    alert("You need to select 5 Players!");
-    return false;
-  } else if (
-    isNaN(perPlayerInputvalueString) ||
-    perPlayerInputvalueString == ""
-  ) {
+  if (isNaN(perPlayerInputvalueString) || perPlayerInputvalueString == "") {
     alert("please enter amount correctly!");
     return;
   }
@@ -31,10 +25,7 @@ document
   .addEventListener("click", function () {
     const managerExpensesValue = document.getElementById("manager-expenses");
     const managerExpensesString = managerExpensesValue.value;
-    if (document.getElementById("name-list").childElementCount != 5) {
-      alert("You need to select 5 Players!");
-      return false;
-    } else if (isNaN(managerExpensesString) || managerExpensesString == "") {
+    if (isNaN(managerExpensesString) || managerExpensesString == "") {
       alert("please enter amount correctly!");
     }
     const managerExpenses = parseFloat(managerExpensesString);
@@ -52,5 +43,5 @@ document
 
     const totalValue = document.getElementById("total");
     totalValue.innerText =
-      coachExpenses + managerExpenses + perPlayerInputvalue * 5;
+      coachExpenses + managerExpenses + (perPlayerInputvalue * document.getElementById("name-list").childElementCount);
   });
