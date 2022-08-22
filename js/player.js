@@ -1,10 +1,12 @@
+//function to check if 5 player is selected
+//if not then add the name to the list
+//if yes then show a alert message
 let count = 0;
-
 function playerNameInclude(playerId) {
-    if (document.getElementById("name-list").childElementCount >= 5) {
-      alert("Wow!You've selected 5 Players!");
-      return false;
-    }
+  if (document.getElementById("name-list").childElementCount >= 5) {
+    alert("Wow!You've selected 5 Players!");
+    return false;
+  }
   const playerNameText = document.getElementById(playerId);
   const playerName = playerNameText.innerText;
   const nameList = document.getElementById("name-list");
@@ -14,33 +16,34 @@ function playerNameInclude(playerId) {
   nameList.appendChild(li);
 }
 
+// function for button disbling
+function btndisable(btnId) {
+  selectButton = document.getElementById(btnId);
+  selectButton.disabled = true;
+  selectButton.style.backgroundColor = "gray";
+}
+
 document.getElementById("btn-messi").addEventListener("click", function () {
   playerNameInclude("name-messi");
-  selectButton = document.getElementById("btn-messi");
-  selectButton.disabled = true;
+  btndisable("btn-messi");
 });
 document.getElementById("btn-neymar").addEventListener("click", function () {
   playerNameInclude("name-neymar");
-  selectButton = document.getElementById("btn-neymar");
-  selectButton.disabled = true;
+  btndisable("btn-neymar");
 });
 document.getElementById("btn-ronaldo").addEventListener("click", function () {
   playerNameInclude("name-ronaldo");
-  selectButton = document.getElementById("btn-ronaldo");
-  selectButton.disabled = true;
+  btndisable("btn-ronaldo");
 });
 document.getElementById("btn-mbappe").addEventListener("click", function () {
   playerNameInclude("name-mbappe");
-  selectButton = document.getElementById("btn-mbappe");
-  selectButton.disabled = true;
+  btndisable("btn-mbappe");
 });
 document.getElementById("btn-aguero").addEventListener("click", function () {
   playerNameInclude("name-aguero");
-  selectButton = document.getElementById("btn-aguero");
-  selectButton.disabled = true;
+  btndisable("btn-aguero");
 });
 document.getElementById("btn-ramos").addEventListener("click", function () {
   playerNameInclude("name-ramos");
-  selectButton = document.getElementById("btn-ramos");
-  selectButton.disabled = true;
+  btndisable("btn-ramos");
 });

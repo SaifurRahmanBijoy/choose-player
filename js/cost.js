@@ -1,9 +1,13 @@
+//to calculate the total expenses for the per person expenses after clicking the total button
+//also checks if 5 player is selected or not
+//if not then return false
 document.getElementById("btn-calculate").addEventListener("click", function () {
   const perPlayerInput = document.getElementById("per-player-input");
   const perPlayerInputvalueString = perPlayerInput.value;
-  if (document.getElementById("name-list").childElementCount < 4) {
-    alert("You've not selected 5 Players!");
-    return;
+  playerCount = document.getElementById("name-list").childElementCount;
+  if (playerCount != 5) {
+    alert("You need to select 5 Players!");
+    return false;
   } else if (
     isNaN(perPlayerInputvalueString) ||
     perPlayerInputvalueString == ""
@@ -13,17 +17,23 @@ document.getElementById("btn-calculate").addEventListener("click", function () {
   }
   const perPlayerInputvalue = parseInt(perPlayerInputvalueString);
   const playerExpenses = document.getElementById("player-expenses");
-  playerExpenses.innerText = perPlayerInputvalue * 5;
+  playerExpenses.innerText =
+    perPlayerInputvalue *
+    document.getElementById("name-list").childElementCount;
 });
 
+//to calculate overall total expenses
+//(per player expenses * player count)+ manager expenses + coach expenses
+//also checks if 5 player is selected or not
+//if not then return false
 document
   .getElementById("calculate-total")
   .addEventListener("click", function () {
     const managerExpensesValue = document.getElementById("manager-expenses");
     const managerExpensesString = managerExpensesValue.value;
-    if (document.getElementById("name-list").childElementCount < 4) {
-      alert("You've not selected 5 Players!");
-      return;
+    if (document.getElementById("name-list").childElementCount != 5) {
+      alert("You need to select 5 Players!");
+      return false;
     } else if (isNaN(managerExpensesString) || managerExpensesString == "") {
       alert("please enter amount correctly!");
     }
