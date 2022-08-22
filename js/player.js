@@ -17,7 +17,7 @@ function playerNameInclude(playerId) {
 }
 
 // function for button disbling
-function btndisable(btnId) {
+function btndisable(btnId) { 
   selectButton = document.getElementById(btnId);
   selectButton.disabled = true;
   selectButton.style.backgroundColor = "gray";
